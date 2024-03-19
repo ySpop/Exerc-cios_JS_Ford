@@ -5,6 +5,8 @@
 // − Triângulo    Escaleno:    possui    3    lados    diferentes.
 
 
+
+
 //entrada de dados
 // = informar as 3 medidas de um triangulo
 
