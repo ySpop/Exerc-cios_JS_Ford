@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO-DESCONTO-FUNCIONÁRIO</title>
+</head>
+
+<body>
+
+    <script>
+
+        let codigo = 0;
+        let valorTotal = 0;
+
+
+        do {
+            codigo = parseInt(prompt(`Digite 1: caso você seja funcionário\nDigite 2: caso seja cliente vip\nDigite 3: caso seja cliente comum `))
+
+            switch (codigo) {
+                case 1:
+                    console.log("Você é um funcionário.");
+                    valorTotal = parseFloat(prompt("Digite o valor total da compra: "))
+                    alert(`O valor da compra com desconto de 10% é igual a: R$${valorTotal * 0.90}`)
+                    break;
+                case 2:
+                    console.log("Você é um cliente VIP.");
+                    valorTotal = parseFloat(prompt("Digite o valor total da compra: "))
+                    alert(`O valor da compra com desconto de 10% é igual a: R$${valorTotal * 0.95}`)
+                    break;
+                case 3:
+                    console.log("Você é um cliente comum.");
+                    alert('Não há desconto para clientes comuns.')
+                    break;
+                default:
+                    console.log("Código inválido.")
+                    break;
+            }
+        } while (codigo < 3);
+
+
+    </script>
+
+</body>
+
+</html>
+
+//entrada de dados
+// = determinar se o cliente é 1- cliente, 2- funcionário e 3-vip
+// = informar o total da compra
+
+//processamento de dados
+// = usar a estrutura switch case para determinar se é cliente, funcionário ou vip
+
+//saída de dados
+// = se for cliente não haverá desconto
+// = se for funcionário terá 10% de desconto
+// = se for vip terá 5% de desconto
