@@ -1,0 +1,59 @@
+<!-- // Escreva um algoritmo que permita a leitura dos nomes de 10 pessoas e armazene os nomes
+// lidos em um vetor. Após isto, o algoritmo deve permitir a leitura de mais 1 nome qualquer de
+// pessoa (para efetuar uma busca) e depois escrever a mensagem ACHEI, se o nome estiver
+// entre os 10 nomes lidos anteriormente (guardados no vetor), ou NÃO ACHEI caso contrário.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="pt-BR">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO-NOMES-SORTIDOS</title>
+ </head>
+ <body>
+
+    <script>
+
+
+    var codigo = 0;  
+    const nomes = []
+    
+   // nomes.forEach(i => {''
+   //    console.log(i)
+   // });
+
+   do {
+      
+   codigo =  parseInt(prompt(`Digite 1: caso deseja adicionar um nome.\nDigite 2: caso você deseje buscar por um nome. `))
+
+   switch (codigo) {
+      case 1:
+         nomes.push(prompt('Digite o nome: '))
+         console.log(nomes)
+         break;
+   
+      case 2: 
+         var BuscarNome = prompt('Digite o nome: ')
+         const found = nomes.find((i) =>  i === BuscarNome);
+        
+         if (found == BuscarNome) {
+            console.log('Achei')
+            alert('ACHEI !!!')
+         } else {
+            console.log('Não encontrei o nome.')
+            alert('Não encontrei o nome.')
+         }
+
+         break;
+
+      default:
+         alert('Código inválido')
+         break;
+   }} while (codigo <= 2);
+
+
+    </script>
+    
+ </body>
+ </html>

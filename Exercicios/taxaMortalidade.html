@@ -30,38 +30,36 @@
     
     <script>
 
-        var codigo = 0;
-        var criancas = 0;
-        var habitantes = 0;
-        var natalidade = 0;
-        var mortalidade = 0;
+        var codigo;
+        var criancas;
+        var habitantes;
+        var natalidade;
+        var mortalidade;
 
 
         do {
 
-        codigo = parseInt(prompt(`O que você deseja calcular ?\n1 para natalidade\n2 para mortalidade `))
+        codigo = parseInt(prompt(`O que você deseja calcular ?\nDigite 1: para natalidade\nDigite 2: para mortalidade `))
 
         switch (codigo) {
             case 1:
             habitantes = parseFloat(prompt("Digite a quantidade de habitantes:  "))
             criancas = parseFloat(prompt("Digite a quantidade de crianças nascidas: "))
             natalidade = (criancas*1000) / habitantes;
-            alert(`A taxa de natalidade é igual a: ${natalidade.toFixed(2)}`)
+            alert(`A taxa de natalidade é igual a: ${natalidade.toFixed(2)}%`)
                 break;
         
             case 2:
             habitantes = parseFloat(prompt("Digite a quantidade de habitantes:  "))
             obitos = parseFloat(prompt("Digite o número de óbitos: "))
             mortalidade = (obitos*1000) / habitantes;
-            alert(`A taxa de mortalidade é igual a: ${mortalidade.toFixed(2)}`)
+            alert(`A taxa de mortalidade é igual a: ${mortalidade.toFixed(2)}%`)
                 break;
 
             default:
                 alert('Código inválido')
                 break;
         }}  while (codigo <= 2);
-
-
 
     </script>
 

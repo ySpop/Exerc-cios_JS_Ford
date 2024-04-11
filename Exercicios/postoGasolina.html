@@ -38,8 +38,51 @@
 
     <script>
 
+    var litrosVendidos = 0
+    var codigo = 0
+    var desconto;
+    var A_álcool = 4.90
+    var G_gasolina = 5.30
+ 
 
+    do {
+
+        codigo = parseInt(prompt(`Digite 1: caso deseje abastecer com álcool\nDigite 2: caso deseje abastecer com gasolina`))
         
+        switch (codigo) {
+            case 1:
+                litrosVendidos = parseFloat(prompt('Digite a quantidade de litros a ser abastecido: '))
+                
+                const valorTotalAlcool = A_álcool * litrosVendidos
+
+                if (litrosVendidos <= 20) {
+                    desconto = 0.97
+                    alert(`O desconto será de 3%\nO valor total a ser pago com desconto é igual a: R$${(valorTotalAlcool*desconto).toFixed(2)}`)
+                } else {
+                    desconto = 0.95
+                    alert(`O desconto será de 5%\nO valor total a ser pago com desconto é igual a: R$${(valorTotalAlcool*desconto).toFixed(2)}`)
+                }
+                break;
+        
+            case 2:
+                litrosVendidos = parseFloat(prompt('Digite a quantidade de litros a ser abastecido: '))
+
+                const valorTotalGasolina = G_gasolina * litrosVendidos
+
+                if (litrosVendidos <= 20) {
+                    desconto = 0.96
+                    alert(`O desconto será de 4%\nO valor total a ser pago com desconto é igual a: R$${(valorTotalGasolina*desconto).toFixed(2)}`)
+                } else {
+                    desconto = 0.94
+                    alert(`O desconto será de 6%\nO valor total a ser pago com desconto é igual a: R$${(valorTotalGasolina*desconto).toFixed(2)}`)
+                }
+                break;
+
+            default:
+                alert('Código inválido.')
+                break;
+        }
+    } while (codigo <= 2);
 
     </script>
     
